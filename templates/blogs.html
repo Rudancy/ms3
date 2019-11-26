@@ -1,0 +1,26 @@
+{% extends 'base.html' %} {% block content %}
+<h1 class="row justify-content-center">The Blog Page</h1>
+
+{% for blog in blogs %}
+<div class="row justify-content-center">
+  <div class="row">
+    <div class="bg-blog">
+      <div class="card">
+
+        <div class="card-body">
+          <h5 class="card-title">{{blog.user_name}}</h5>
+          <h6 class="card-subtitle mb-2 text-muted">I will be voting {{blog.user_party}}</h6>
+          <h4 class="card-title"></h4>
+          <p class="card-text">{{blog.user_comment}}</p>
+          <div class="row">
+            <span class="user-borders justify-content-center col-4"> My age is {{blog.user_age}}</span>
+            <span class="user-borders justify-content-center col-4">My religion is {{blog.user_region}}</span>
+            <span class="user-borders justify-content-center col-4"> I earn £{{blog.user_wage}}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<br> {% endfor %} {% endblock %}
