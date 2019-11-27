@@ -1,5 +1,4 @@
 @app.route('/user_blogs')
 def get_blogs_page():
     now = datetime.datetime.now()
-    return render_template("blogs.html", blogs=mongo.db.user_profile.find(),
-                            times=mongo.db.user_profile.user_time.append(now))
+    return render_template("blogs.html", blogs=mongo.db.user_profile.find(), now=now)
