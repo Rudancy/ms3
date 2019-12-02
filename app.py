@@ -19,15 +19,15 @@ mongo = PyMongo(app)
 def homepage():
     return render_template("homepage.html")
 
-@app.route('/add_blog')
+@app.route('/add_blog', methods=['GET', 'POST'])
 def add_blog():
-    regions=mongo.db.regions.find(),
-    wages=mongo.db.wages.find(),
-    parties=mongo.db.parties.find(),
-    religion=mongo.db.religion.find()
-    
-    
-    return render_template("add_blog.html", regions=regions, wages=wages, parties=parties, religion=religion)
+        wages=mongo.db.wages.find()
+        regions=mongo.db.regions.find()
+        parties=mongo.db.parties.find()
+        religions=mongo.db.religion.find()
+        
+        
+        return render_template("add_blog.html", regions=regions, wages=wages, parties=parties, religions=religions)
 
 
 @app.route('/user_blogs')

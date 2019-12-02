@@ -5,3 +5,12 @@
 .user-borders{
     border-style: solid;
 }
+
+.options{
+    background-color: red;
+    font-size: inherit;
+}
+
+.bd-datainput{
+    
+}

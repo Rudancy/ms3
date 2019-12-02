@@ -1,53 +1,63 @@
 {% extends 'base.html' %} {% block content %}
 
-<form action="" method="POST">
-    <div class="form-row">
 
-        <div class="form-group col-md-6">
-            <label for="username">User Name</label>
-            <input type="text" class="form-control" id="user_name" name="user_name" placeholder="Username">
-        </div>
-    </div>
-    <div class="form-group">
-        <label for="exampleFormControlTextarea1">Why I will be voting</label>
-        <textarea class="form-control" id="user_comment" name="user_comment" rows="3" placeholder="I will be voting for......."></textarea>
-    </div>
 
-    <div class="form-group">
 
-        <label for="parties">Political Parties</label>
-        <select class="form-control" id="parties">
-            {{for party in parties}}
-                <option>Please choose an option</option>
-                <option>{{party.poltitical_party}}
-                </option>
-            {{endfor}}  
-    </select>
-    </div>
 
-    <div class="form-group col-md-4">
-        <label for="earnings">My Earnings</label>
-        <select id="user_wage" class="form-control">
-        <option selected>Choose...</option>
-        <option></option>
-      </select>
-        <div class="form-group col-md-4">
-            <label for="region">I live</label>
-            <select id="user_region" class="form-control">
-        <option selected>Choose...</option>
-        <option></option>
-      </select>
-        </div>
-        <div class="form-group">
-            <div class="form-check">
-                <input class="form-check-input" type="checkbox" id="gridCheck">
-                <label class="form-check-label" for="gridCheck">
-        Check me out
-      </label>
+
+
+<form>
+    <div class="container">
+        <div class="bd-datainput">
+            <h2>Please enter your details</h2>
+            <div class="row">
+
+                <div class="input-group mb-3">
+
+
+
+                    <select class="custom-select" id="inputGroupSelect02">
+                        <option selected>Choose...</option>
+                        {% for wage in wages %}
+                        <option value="{{wage.wage}}">{{wage.wage}}</option>
+                        {%endfor%}
+                    </select>
+
+                </div>
+
+                <div class="input-group mb-3">
+                    <select class="custom-select" id="inputGroupSelect01">
+                        
+                        <option selected>Choose...</option>
+                        {% for region in regions %}
+                        <option value="{{region.region}}">{{region.region}}</option>
+                        {%endfor%}
+                    </select>
+
+                </div>
+
+                <div class="input-group mb-3">
+
+                    <select class="custom-select" id="inputGroupSelect03">
+                        <option selected>Choose...</option>
+                        {% for party in parties %}
+                        <option value="{{party.party}}">{{party.party}}</option>
+                        {%endfor%}
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <select class="custom-select" id="inputGroupSelect04">
+                        <option selected>Choose...</option>
+                        {% for religion in religions %}
+                        <option value="{{religion.religion}}">{{religion.religion}}</option>
+                        {% endfor %}
+                    </select>
+
+                </div>
             </div>
         </div>
-        <button type="submit" class="btn btn-primary">Sign in</button>
+    </div>
 </form>
-
 
 {% endblock %}
