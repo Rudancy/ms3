@@ -16,8 +16,8 @@
             <div class="row">
                 <label for="exampleInputEmail1">Username</label>
             </div>
-            
-            
+
+
             <div class="form-row mb-1">
                 <div class="col-12">
                     <div class="form-group">
@@ -57,9 +57,9 @@
                     </div>
                 </div>
             </div>
-            
-            
-            
+
+
+
             <div class="row">
                 <label for="exampleInputEmail1">Wages</label>
             </div>
@@ -67,7 +67,7 @@
                 <div class="col-12">
                     <div class="input-group mb-3">
 
-                        <select name=""user_wage"" class="custom-select" id="inputGroupSelect02">
+                        <select name="" user_wage "" class="custom-select" id="inputGroupSelect02">
                         <option selected>Choose...</option>
                         {% for wage in wages %}
                         <option value="{{wage.wage}}">£{{wage.wage}}</option>
@@ -95,13 +95,13 @@
                     </div>
                 </div>
             </div>
-            
-            
-            
+
+
+
             <div class="row mb-1">
                 <label for="exampleInputEmail1">The party I am supporting</label>
             </div>
-            
+
             <div class="row">
                 <div class="col-12">
                     <div class="input-group mb-3">
@@ -114,7 +114,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="row mb-1">
                 <label for="exampleInputEmail1">I practice this religion</label>
             </div>
@@ -143,12 +143,14 @@
                     </div>
                 </div>
             </div>
+            <div class="row justify-centre">
+                <button type="submit" name="action" class="btn btn-outline-success">Send</button>
+            </div>
     </div>
 </div>
-</div>
-</div>
 
-</div>
+
+
 </form>
 </div>
 

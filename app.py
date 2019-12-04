@@ -7,7 +7,7 @@ from flask_wtf import FlaskForm
 
 app = Flask(__name__)
 
-app.config["SECRET_KEY"] = ''
+app.config["SECRET_KEY"] = 'the secret'
 app.config["MONGO_DBNAME"] = 'vote_base'
 app.config["MONGO_URI"] = 'mongodb+srv://root:r00tpa55@mycluster-qbgul.mongodb.net/vote_base?retryWrites=true&w=majority'
 
@@ -18,6 +18,12 @@ mongo = PyMongo(app)
 @app.route('/homepage')
 def homepage():
     return render_template("homepage.html")
+    
+    
+@app.route('/user_blogs')
+def get_blogs_page():
+    
+    return render_template("blogs.html", blogs=mongo.db.user_profile.find())
 
 @app.route('/add_blog', methods=['GET', 'POST'])
 def add_blog():
@@ -54,10 +60,7 @@ def insert_blog():
     return redirect(url_for('user_blogs'))
     
     
-@app.route('/user_blogs')
-def get_blogs_page():
-    
-    return render_template("blogs.html", blogs=mongo.db.user_profile.find())
+
     
     
 if __name__ == '__main__':
