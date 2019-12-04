@@ -1,5 +1,5 @@
 import os
-from flask import Flask, render_template, redirect, request, url_for, session
+from flask import Flask, render_template, redirect, request, url_for, session, flash
 from flask_pymongo import PyMongo
 import datetime
 from flask_wtf import FlaskForm
@@ -25,15 +25,39 @@ def add_blog():
         regions=mongo.db.regions.find()
         parties=mongo.db.parties.find()
         religions=mongo.db.religion.find()
-        
-        
-        return render_template("add_blog.html", regions=regions, wages=wages, parties=parties, religions=religions)
+        ages=mongo.db.age_groups.find()
+        return render_template("add_blog.html", ages=ages, regions=regions, wages=wages, parties=parties, religions=religions)
 
-
+@app.route('/insert_blog', methods=['GET', 'POST'])
+def insert_blog():
+    
+    now = datetime.datetime.now()
+    
+    blog= {
+        "user_name":request.form.get("user_name"),
+        "user_email":request.form.get("user_email"),
+        "user_age":request.form.get("user_age"),
+        "user_region":request.form.get("user_region"),
+        "user_party":request.form.get("user_party"),
+        "user_religion":request.form.get("user_religion"),
+        "user_comment":request.form.get("user_comment"),
+        "user_wage":request.form.get("user_wage"),
+        "user_time":now
+        }
+    
+    if request.method=="POST":
+        blog = request.form.to_dict()
+        user_profile = mongo.db.user_profile
+        user_profile.insert_one(blog)
+        flash('Your post has succeeded!')
+    
+    return redirect(url_for('user_blogs'))
+    
+    
 @app.route('/user_blogs')
 def get_blogs_page():
-    now = datetime.datetime.now()
-    return render_template("blogs.html", blogs=mongo.db.user_profile.find(), now=now)
+    
+    return render_template("blogs.html", blogs=mongo.db.user_profile.find())
     
     
 if __name__ == '__main__':

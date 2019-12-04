@@ -1,16 +1,24 @@
-.card{
+.card {
     background-color: #ece3e0;
 }
 
-.user-borders{
+.user-borders {
     border-style: solid;
 }
 
-.options{
+.options {
     background-color: red;
     font-size: inherit;
 }
 
-.bd-datainput{
+.bd-datainput {
+    background-color: #ece3e0;
+    border-style: solid;
     
+     
+}
+
+.data-input-header {
+    padding-right: 10px;
+
 }
