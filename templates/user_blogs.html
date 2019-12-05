@@ -18,6 +18,14 @@
             <span class="user-borders justify-content-center col-4"> I earn £{{blog.user_wage}}</span>
             <span class="user-borders justify-content-center col-4"> I live in £{{blog.user_region}}</span>
           </div>
+          <div class="row">
+            <a href="{{url_for('edit_blog', user_profile_id=blog._id)}}"
+            <button type="button" class="btn btn-warning">Edit</button>
+          </a>
+          </div>
+          <div class="row">
+            <button type="button" class="btn btn-danger">Delete</button>
+          </div>
         </div>
       </div>
     </div>

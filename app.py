@@ -3,6 +3,7 @@ from flask import Flask, render_template, redirect, request, url_for, session, f
 from flask_pymongo import PyMongo
 import datetime
 from flask_wtf import FlaskForm
+from bson.objectid import ObjectId 
 
 
 app = Flask(__name__)
@@ -20,13 +21,29 @@ def homepage():
     return render_template("homepage.html")
     
     
-@app.route('/user_blogs')
-def get_blogs_page():
+@app.route('/register')
+def register():
     
-    return render_template("blogs.html", blogs=mongo.db.user_profile.find())
+    return redirect(url_for('add_blog'))
+    
+@app.route('/sign_in')
+def sign_in(user_profile_id):
+    user = mongo.db.user_profile.find_one({"_id": ObjectId(user_profile_id)})
+    all_users = mongo.db.user_profile.find({"_id": ObjectId(user_profile_id)})
+    if user == all_users:
+        return redirect(url_for('user_blogs'))
+        
+    else:
+        print("sorry thats wrong")
+    
+@app.route('/user_blogs')
+def user_blogs():
+    
+    return render_template("user_blogs.html", blogs=mongo.db.user_profile.find())
 
 @app.route('/add_blog', methods=['GET', 'POST'])
 def add_blog():
+        
         wages=mongo.db.wages.find()
         regions=mongo.db.regions.find()
         parties=mongo.db.parties.find()
@@ -57,9 +74,13 @@ def insert_blog():
         user_profile.insert_one(blog)
         flash('Your post has succeeded!')
     
-    return redirect(url_for('user_blogs'))
+        return redirect(url_for("user_blogs"))
     
-    
+@app.route('/edit_blog/<user_profile_id>')
+def edit_blog(user_profile_id):
+    user_name = mongo.db.user_profile.find_one({"_id": ObjectId(user_profile_id)})
+    all_blogs=mongo.db.user_profile.find()
+    return render_template('edit_blog.html', user=user_name, blog=all_blogs)
 
     
     

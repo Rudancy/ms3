@@ -1,8 +1,7 @@
 {% extends 'base.html' %} {% block content %}
-
-
-
-
+<h1>
+    Edit Task
+</h1>
 
 <div class="bd-datainput">
     <div class="container justify-content-center">
@@ -21,7 +20,7 @@
             <div class="form-row mb-1">
                 <div class="col-12">
                     <div class="form-group">
-
+                        
                         <input name="user_name" type="text" class="form-control" id="exampleInputUsername" aria-describedby="username" placeholder="Enter username">
                         <small id="userhelp" class="form-text text-muted">This will be your username, and what other users will see</small>
                     </div>
@@ -51,7 +50,11 @@
                         <select name="user_age" class="custom-select" id="inputGroupSelect02">
                         <option selected>Choose...</option>
                         {% for age in ages %}
+                        {% if age.user == blog.user %}
+                        <option value="{{age.age}}" selected >I am {{age,age}} years old</option>
+                        {% else %}
                         <option value="{{age.age}}">I am {{age,age}} years old</option>
+                        {% endif %}
                         {%endfor%}
                     </select>
                     </div>
@@ -67,7 +70,7 @@
                 <div class="col-12">
                     <div class="input-group mb-3">
 
-                        <select name="user_wage"  class="custom-select" id="inputGroupSelect02">
+                        <select name="user_wage" class="custom-select" id="inputGroupSelect02">
                         <option selected>Choose...</option>
                         {% for wage in wages %}
                         <option value="{{wage.wage}}">£{{wage.wage}}</option>
@@ -144,7 +147,7 @@
                 </div>
             </div>
             <div class="row justify-centre">
-                <button type="submit"class="btn btn-outline-success">Send</button>
+                <button type="submit" class="btn btn-outline-success">Send</button>
             </div>
     </div>
 </div>
