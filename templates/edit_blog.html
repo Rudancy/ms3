@@ -21,7 +21,7 @@
                 <div class="col-12">
                     <div class="form-group">
                         
-                        <input name="user_name" type="text" class="form-control" id="exampleInputUsername" aria-describedby="username" placeholder="Enter username">
+                        <input name="user_name" type="text" class="form-control" id="exampleInputUsername" aria-describedby="username" placeholder="Enter username" value="{{user.user_name}}">
                         <small id="userhelp" class="form-text text-muted">This will be your username, and what other users will see</small>
                     </div>
                 </div>
@@ -35,7 +35,7 @@
                 <div class="col-12">
                     <div class="form-group">
 
-                        <input type="email" name="user_email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                        <input type="email" name="user_email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" value="{{user.user_email}}">
                         <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
                     </div>
                 </div>
@@ -49,13 +49,11 @@
 
                         <select name="user_age" class="custom-select" id="inputGroupSelect02">
                         <option selected>Choose...</option>
+                        
                         {% for age in ages %}
-                        {% if age.user == blog.user %}
-                        <option value="{{age.age}}" selected >I am {{age,age}} years old</option>
-                        {% else %}
-                        <option value="{{age.age}}">I am {{age,age}} years old</option>
-                        {% endif %}
+                        <option value="{{age.age}}"{% if blog.user_age == age.age %}{% endif %}selected>I am {{age.age}} years old</option>
                         {%endfor%}
+                        
                     </select>
                     </div>
                 </div>
@@ -73,7 +71,10 @@
                         <select name="user_wage" class="custom-select" id="inputGroupSelect02">
                         <option selected>Choose...</option>
                         {% for wage in wages %}
+                        
+                        
                         <option value="{{wage.wage}}">£{{wage.wage}}</option>
+                        
                         {%endfor%}
                     </select>
                     </div>
@@ -147,7 +148,7 @@
                 </div>
             </div>
             <div class="row justify-centre">
-                <button type="submit" class="btn btn-outline-success">Send</button>
+                <button type="submit" class="btn btn-outline-success">Update</button>
             </div>
     </div>
 </div>

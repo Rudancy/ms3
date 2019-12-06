@@ -20,21 +20,7 @@ mongo = PyMongo(app)
 def homepage():
     return render_template("homepage.html")
     
-    
-@app.route('/register')
-def register():
-    
-    return redirect(url_for('add_blog'))
-    
-@app.route('/sign_in')
-def sign_in(user_profile_id):
-    user = mongo.db.user_profile.find_one({"_id": ObjectId(user_profile_id)})
-    all_users = mongo.db.user_profile.find({"_id": ObjectId(user_profile_id)})
-    if user == all_users:
-        return redirect(url_for('user_blogs'))
-        
-    else:
-        print("sorry thats wrong")
+
     
 @app.route('/user_blogs')
 def user_blogs():
@@ -72,16 +58,42 @@ def insert_blog():
         blog = request.form.to_dict()
         user_profile = mongo.db.user_profile
         user_profile.insert_one(blog)
-        flash('Your post has succeeded!')
+        
     
         return redirect(url_for("user_blogs"))
     
 @app.route('/edit_blog/<user_profile_id>')
 def edit_blog(user_profile_id):
-    user_name = mongo.db.user_profile.find_one({"_id": ObjectId(user_profile_id)})
+    
+    user = mongo.db.user_profile.find_one({"_id": ObjectId(user_profile_id)})
     all_blogs=mongo.db.user_profile.find()
-    return render_template('edit_blog.html', user=user_name, blog=all_blogs)
+    wages=mongo.db.wages.find()
+    regions=mongo.db.regions.find()
+    parties=mongo.db.parties.find()
+    religions=mongo.db.religion.find()
+    ages=mongo.db.age_groups.find()                
+    
+    
+    return render_template('edit_blog.html', user=user, blog=all_blogs, ages=ages, regions=regions, wages=wages, parties=parties, religions=religions)
 
+    
+    
+@app.route('/update_blog/<user_profile_id>', methods=['POST'])
+def update_blog(user_profile_id):
+    blogs=mongo.db.user_profile
+    blogs.update({'_id':ObjectId(user_profile_id)},
+    {   
+        "user_name":request.form.get("user_name"),
+        "user_email":request.form.get("user_email"),
+        "user_age":request.form.get("user_age"),
+        "user_region":request.form.get("user_region"),
+        "user_party":request.form.get("user_party"),
+        "user_religion":request.form.get("user_religion"),
+        "user_comment":request.form.get("user_comment"),
+        "user_wage":request.form.get("user_wage")
+    })
+    return redirect(url_for('user_blogs'))
+    
     
     
 if __name__ == '__main__':

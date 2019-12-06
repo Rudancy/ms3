@@ -2,3 +2,25 @@
 def get_blogs_page():
     now = datetime.datetime.now()
     return render_template("blogs.html", blogs=mongo.db.user_profile.find(), now=now)
+    
+    
+    
+    app.route('/sign_in')
+def sign_in(user_profile_id):
+    user = mongo.db.user_profile.find_one({"_id": ObjectId(user_profile_id)})
+    all_users = mongo.db.user_profile.find()
+    if user == all_users['user_name']:
+        return redirect(url_for('user_blogs'))
+        
+        
+        
+    
+@app.route('/register')
+def register():
+    
+    return redirect(url_for('add_blog'))
+    
+
+        
+    else:
+        print("sorry thats wrong")
