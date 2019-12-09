@@ -1,11 +1,11 @@
 {% extends 'base.html' %} {% block content %}
 <h1>
-    Edit Task
+    Edit blog
 </h1>
 
 <div class="bd-datainput">
     <div class="container justify-content-center">
-        <form action="{{ url_for('insert_blog') }}" method="POST">
+        <form action="{{url_for('update_blog', user_profile_id=user_profile_id)}}" method="POST">
 
             <div class="row mb-1">
                 <div class="col-12">
@@ -51,7 +51,7 @@
                         <option selected>Choose...</option>
                         
                         {% for age in ages %}
-                        <option value="{{age.age}}"{% if blog.user_age == age.age %}{% endif %}selected>I am {{age.age}} years old</option>
+                        <option value="{{age.age}}"{% if blog.user_age == age.age %}selected{% endif %}>I am {{age.age}} years old</option>
                         {%endfor%}
                         
                     </select>
@@ -147,9 +147,10 @@
                     </div>
                 </div>
             </div>
-            <div class="row justify-centre">
-                <button type="submit" class="btn btn-outline-success">Update</button>
-            </div>
+            <div class="row">
+            <a href="{{url_for('user_blogs')}}" <button type="button" class="btn btn-warning" name="action">Done</button>
+          </a>
+          </div>
     </div>
 </div>
 

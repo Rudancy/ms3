@@ -36,7 +36,7 @@ def add_blog():
         religions=mongo.db.religion.find()
         ages=mongo.db.age_groups.find()
         return render_template("add_blog.html", ages=ages, regions=regions, wages=wages, parties=parties, religions=religions)
-
+        return redirect(url_for("insert_blog"))
 @app.route('/insert_blog', methods=['GET', 'POST'])
 def insert_blog():
     
@@ -74,7 +74,7 @@ def edit_blog(user_profile_id):
     ages=mongo.db.age_groups.find()                
     
     
-    return render_template('edit_blog.html', user=user, blog=all_blogs, ages=ages, regions=regions, wages=wages, parties=parties, religions=religions)
+    return render_template('edit_blog.html', user=user, blog=all_blogs, ages=ages, regions=regions, wages=wages, parties=parties, religions=religions, user_profile_id=user_profile_id)
 
     
     
