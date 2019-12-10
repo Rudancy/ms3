@@ -15,13 +15,9 @@ app.config["MONGO_URI"] = 'mongodb+srv://root:r00tpa55@mycluster-qbgul.mongodb.n
 mongo = PyMongo(app)
 
 
-@app.route('/')
-@app.route('/homepage')
-def homepage():
-    return render_template("homepage.html")
     
 
-    
+@app.route('/')    
 @app.route('/user_blogs')
 def user_blogs():
     
@@ -36,7 +32,8 @@ def add_blog():
         religions=mongo.db.religion.find()
         ages=mongo.db.age_groups.find()
         return render_template("add_blog.html", ages=ages, regions=regions, wages=wages, parties=parties, religions=religions)
-        return redirect(url_for("insert_blog"))
+    
+
 @app.route('/insert_blog', methods=['GET', 'POST'])
 def insert_blog():
     
@@ -78,11 +75,13 @@ def edit_blog(user_profile_id):
 
     
     
-@app.route('/update_blog/<user_profile_id>', methods=['POST'])
+@app.route('/update_blog/<user_profile_id>', methods=['GET', 'POST'])
 def update_blog(user_profile_id):
-    blogs=mongo.db.user_profile
-    blogs.update({'_id':ObjectId(user_profile_id)},
-    {   
+    
+    
+        
+    update={
+        
         "user_name":request.form.get("user_name"),
         "user_email":request.form.get("user_email"),
         "user_age":request.form.get("user_age"),
@@ -91,8 +90,15 @@ def update_blog(user_profile_id):
         "user_religion":request.form.get("user_religion"),
         "user_comment":request.form.get("user_comment"),
         "user_wage":request.form.get("user_wage")
-    })
-    return redirect(url_for('user_blogs'))
+    }
+    
+    if request.method=="POST":
+        update=request.form.to_dict()
+        user_profile=mongo.db.user_profile
+        user_profile.update({"_id":ObjectId(user_profile_id)}, update)
+    
+    
+    return redirect(url_for('user_blogs', user_profile_id=user_profile_id))
     
     
     

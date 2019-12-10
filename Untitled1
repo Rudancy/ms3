@@ -24,3 +24,8 @@ def register():
         
     else:
         print("sorry thats wrong")
+        
+----------------------------------- edit_blog
+        
+blogs=mongo.db.user_profile
+    blogs.update({'_id':ObjectId(user_profile_id)},
