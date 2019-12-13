@@ -20,7 +20,7 @@
             <div class="form-row mb-1">
                 <div class="col-12">
                     <div class="form-group">
-                        
+
                         <input name="user_name" type="text" class="form-control" id="exampleInputUsername" aria-describedby="username" placeholder="Enter username" value="{{user.user_name}}">
                         <small id="userhelp" class="form-text text-muted">This will be your username, and what other users will see</small>
                     </div>
@@ -143,21 +143,21 @@
                 <div class="col-12">
                     <div class="form-group">
                         <label for="exampleFormControlTextarea1"></label>
-                        <textarea name="user_comment" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                        <textarea name="user_comment" class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Please leave a comment" aria-describedby="user_comment" value="{{user.user_comment}}"></textarea>
                     </div>
                 </div>
             </div>
             <div class="row">
-            <a href="{{url_for('user_blogs')}}" <button type="button" class="btn btn-warning" name="action">Done</button>
-          </a>
-          </div>
+                <button type="submit" class="btn btn-warning" name="action">Done</button>
+
+            </div>
+
+
+
+
+        </form>
+
     </div>
 </div>
 
-
-
-</form>
-</div>
-
-</div>
 {% endblock %}

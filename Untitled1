@@ -29,3 +29,36 @@ def register():
         
 blogs=mongo.db.user_profile
     blogs.update({'_id':ObjectId(user_profile_id)},
+    
+    
+
+    
+    
+    
+    
+    
+    
+@app.route('/update_blog/<user_profile_id>', methods=['GET', 'POST'])
+def update_blog(user_profile_id):
+    
+    
+        
+    update={
+        
+        "user_name":request.form.get("user_name"),
+        "user_email":request.form.get("user_email"),
+        "user_age":request.form.get("user_age"),
+        "user_region":request.form.get("user_region"),
+        "user_party":request.form.get("user_party"),
+        "user_religion":request.form.get("user_religion"),
+        "user_comment":request.form.get("user_comment"),
+        "user_wage":request.form.get("user_wage")
+    }
+    
+    if request.method=="POST":
+        edit=request.form.to_dict()
+        user_profile=mongo.db.user_profile
+        user_profile.update_one({"_id":ObjectId(user_profile_id)}, edit)
+    
+    
+    return redirect(url_for('user_blogs'))
