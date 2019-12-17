@@ -15,9 +15,12 @@ app.config["MONGO_URI"] = 'mongodb+srv://root:r00tpa55@mycluster-qbgul.mongodb.n
 mongo = PyMongo(app)
 
 
-    
+@app.route('/')
+@app.route('/home')
+def home():
+    return render_template('home.html')
 
-@app.route('/')    
+    
 @app.route('/user_blogs')
 def user_blogs():
     
@@ -54,6 +57,7 @@ def insert_blog():
     if request.method=="POST":
         blog = request.form.to_dict()
         user_profile = mongo.db.user_profile
+        
         user_profile.insert_one(blog)
         
     

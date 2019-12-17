@@ -14,8 +14,8 @@
 .bd-datainput {
     background-color: #ece3e0;
     border-style: solid;
-    
-     
+
+
 }
 
 .data-input-header {
@@ -23,4 +23,77 @@
 
 }
 
+/*-------------------------------------------thumbnail styling--------------------*/
 
+.thumbnail {
+    display: block;
+    padding: 4px;
+    margin-bottom: 20px;
+    line-height: 1.42857143;
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    -webkit-transition: border .2s ease-in-out;
+    -o-transition: border .2s ease-in-out;
+    transition: border .2s ease-in-out;
+    text-align: center;
+
+}
+
+
+thumbnail img {
+    text-align: center;
+    filter: grayscale(100%);
+    transition: transform 2s;
+}
+
+.thumbnail img:hover {
+    filter: grayscale(0);
+
+    border-color: #f07f03;
+}
+
+/*-------------------------------------thumbnail party pics----------------------*/
+
+#conservative-pic,
+#SNP-pic,
+#labour-pic,
+#brexit-pic,
+#dup-pic,
+#green-pic,
+#lib-pic,
+#plaid-pic {
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+    padding: 4px;
+    line-height: 1.42857143;
+    background-color: transparent;
+    border: 5px solid #797575;
+    border-radius: 4px;
+    -webkit-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}
+
+hr {
+    display: block;
+    position: relative;
+    padding: 0;
+    margin: 8px auto;
+    height: 0;
+    width: 100%;
+    max-height: 0;
+    font-size: 1px;
+    line-height: 0;
+    clear: both;
+    border: none;
+    border-top: 1px solid #aaaaaa;
+    border-bottom: 1px solid #ffffff;
+}
+
+.btn-block {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+}
