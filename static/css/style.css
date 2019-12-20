@@ -1,6 +1,32 @@
-.card {
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Marck+Script&display=swap');
+
+/*----------------- mainstyles----------------*/
+
+.main-home {
     background-color: #ece3e0;
+    padding: 40px;
+    border-radius: 28px;
+    margin-bottom: 55px;
 }
+
+
+p {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+}
+p {
+    line-height: 1.5;
+    margin: 10px 0;
+}
+
+/*----------------- user-blog styles----------------*/
+.blog-title {
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+
+
 
 .user-borders {
     border-style: solid;
@@ -14,6 +40,10 @@
 .bd-datainput {
     background-color: #ece3e0;
     border-style: solid;
+    padding-left: 20px;
+    border-radius: 25px;
+    margin-bottom: 40px;
+
 
 
 }
@@ -22,6 +52,35 @@
     padding-right: 10px;
 
 }
+
+
+.output-info {
+    margin-left: 30px;
+
+}
+
+.output-info-name {
+    padding-top: 12px;
+    margin-left: 30px;
+}
+
+
+
+.blog-output {
+    background-color: #ece3e0;
+    border-radius: 25px;
+    width: 60%;
+    border: solid;
+    border-color: slategray;
+    border-style: double;
+}
+
+.user-comment-text{
+    font-family: 'Marck Script', cursive;
+    
+}
+
+
 
 /*-------------------------------------------thumbnail styling--------------------*/
 
@@ -70,11 +129,14 @@ thumbnail img {
     line-height: 1.42857143;
     background-color: transparent;
     border: 5px solid #797575;
-    border-radius: 4px;
+    border-radius: 70px;
     -webkit-transition: all .2s ease-in-out;
     -o-transition: all .2s ease-in-out;
     transition: all .2s ease-in-out;
 }
+
+/*-------------------------------------button and hr styling----------------------*/
+
 
 hr {
     display: block;
@@ -82,7 +144,7 @@ hr {
     padding: 0;
     margin: 8px auto;
     height: 0;
-    width: 100%;
+    width: 80%;
     max-height: 0;
     font-size: 1px;
     line-height: 0;
@@ -90,10 +152,127 @@ hr {
     border: none;
     border-top: 1px solid #aaaaaa;
     border-bottom: 1px solid #ffffff;
+    margin-bottom: 45px;
+}
+
+hr.data-line{
+    display: block;
+    position: relative;
+    padding: 0;
+    margin: 8px auto;
+    height: 0;
+    width: 80%;
+    max-height: 0;
+    font-size: 1px;
+    line-height: 0;
+    clear: both;
+    border: none;
+    border-top: 1px solid #aaaaaa;
+    border-bottom: 1px solid #ffffff;
+    
+}
+
+
+
+.btn-block-home {
+    display: block;
+    width: 48%;
+    margin-bottom: 10px;
+    margin-top: 25px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.hr-style {
+    margin-top: 45px;
+}
+
+
+.bottom-button {
+    margin-bottom: 50px;
+}
+
+.btn-warning {
+    color: #212529;
+    background-color: #f7ec90;
+    border-color: #ffc107;
 }
 
 .btn-block {
     display: block;
-    width: 100%;
+    width: 20%;
     margin-bottom: 10px;
+    margin-top: 25px;
+    margin-left: auto;
+    margin-right: auto;
 }
+
+
+btn-block-home {
+    display: block;
+    width: 48%;
+    margin-bottom: 10px;
+    margin-top: 25px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+
+/*----------------- main headings--------------*/
+#main-header {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+
+.main-text {
+    text-align: center;
+}
+
+
+h3,
+h1 {
+    text-align: center;
+}
+
+
+.main-heading {
+    margin-bottom: 25px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+
+.sub-heading-logo {
+    margin-bottom: 25px;
+}
+
+
+
+.modal-heading {}
+
+.modal-content p {}
+
+
+body {
+    margin-bottom: 20px;
+    background-color: ghostwhite;
+}
+
+
+.bg-light {
+    background-color: #aebecd!important;
+}
+
+
+
+
+
+
+
+
+

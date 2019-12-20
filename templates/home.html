@@ -1,408 +1,417 @@
-{% extends 'base.html' %} {% block content %}
+{% extends 'base.html' %}
 
-<div class="container">
-    <div class="row">
-        <h1>The Election 2019 Blog</h1>
-    </div>
-</div>
-
-
-<div class="container justify-content-centre">
-    <div class="row">
-        <h3>The Aims and Agenda of This Website</h3>
+<section id="home-bg">
+    {% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h1 id="main-header">The Election 2019 Blog</h1>
+            </div>
+        </div>
     </div>
 
 
-
-    <div class="row">
-        <p>The concept behind this website is to give a platform for people of all different backgrounds, culuture and religions to voice their opinions. It is an opportunity for people to say a bit about themselves, their age, religion and what region they
-            hail from, this in turn will give people a clearer in sight into their individualistic needs, concerns and feelings. The data from this website will be stored in a database that can then be used to create links and correlations that may appear
-            between voters, for example 30% of all people in the north are voting for this party. The Information within the database will only be used for research purposes and for other users to see what different people with different demographics
-            are thinking.
-
-            <hr>
-
-            <strong>This is not a place to vent hatred or intolerence, those who do will
-         not be tolerated and they will be kicked off and suffer the derision of all other users and society in general.</strong></p>
-    </div>
-</div>
-
-
-<div class="container">
-    <div class="row">
-        <h3>Please click on a logo to learn more about the party</h3>
-    </div>
-</div>
-
-
-<div class="container">
-    <div class="row justify-content-center">
-
-        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
-
-            <h4 class="modal-heading">Conservatives</h4>
-
-            <div class="thumbnail">
-                <img id="conservative-pic" class="thumbnail" data-toggle="modal" data-target="#modal-conservative" src="{{url_for('static', filename='img/party-logo/conservative.png')}}" alt="image of conservative logo">
+    <div class="container main-home justify-content-centre">
+        <div class="row">
+            <div class="col-12">
+                <h3>The Aims and Agenda of This Website</h3>
             </div>
         </div>
 
-        <div id="modal-conservative" class="modal" role="dialog">
-            <div class="modal-dialog modal-lg">
 
-                <!-- Modal content-->
-                <div class="modal-content">
+        <div class="row main-text">
+            <p>The concept behind this website is to give a platform for people of all different backgrounds, culuture and religions to voice their opinions. It is an opportunity for people to say a bit about themselves, their age, religion and what region
+                they hail from, this in turn will give people a clearer in sight into their individualistic needs, concerns and feelings. The data from this website will be stored in a database that can then be used to create links and correlations that
+                may appear between voters, for example 30% of all people in the north are voting for this party. The Information within the database will only be used for research purposes and for other users to see what different people with different
+                demographics are thinking.
 
-                    <div class="modal-header">
-                        <h4 class="modal-title">Conservatives</h4>
+                <hr>
+
+                <strong>This is not a place to vent hatred or intolerence, those who do will
+         not be tolerated and they will be kicked off and suffer the derision of all other users and society in general.</strong></p>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h3 class="sub-heading-logo">Please click on a logo to learn more about the party</h3>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <div class="row justify-content-center">
+
+            <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+
+                <h4 class="modal-heading">Conservatives</h4>
+
+                <div class="thumbnail">
+                    <img id="conservative-pic" class="thumbnail" data-toggle="modal" data-target="#modal-conservative" src="{{url_for('static', filename='img/party-logo/conservative.png')}}" alt="image of conservative logo">
+                </div>
+            </div>
+
+            <div id="modal-conservative" class="modal" role="dialog">
+                <div class="modal-dialog modal-lg">
+
+                    <!-- Modal content-->
+                    <div class="modal-content">
+
+                        <div class="modal-header">
+                            <h4 class="modal-title">Conservatives</h4>
+                        </div>
+
+                        <div class="container">
+
+                            <div class="modal-body">
+                                <p>The Conservative Party, officially the Conservative and Unionist Party, is a centre-right political party in the United Kingdom. The governing party since 2010, it is the largest in the House of Commons, with 288 Members
+                                    of Parliament. It also has 234 members of the House of Lords, 4 members of the European Parliament, 31 Members of the Scottish Parliament, 11 members of the Welsh Assembly, 8 members of the London Assembly and 7,445
+                                    local councillors.[13] The Conservative Party was founded in 1834 from the Tory Party—the Conservatives' colloquial name is "Tories"—and was one of two dominant political parties in the nineteenth century, along with
+                                    the Liberal Party. Under Benjamin Disraeli it played a preeminent role in politics at the height of the British Empire. In 1912, the Liberal Unionist Party merged with the party to form the Conservative and Unionist
+                                    Party. In the 1920s, the Labour Party surpassed the Liberals as the Conservatives' main rivals. Conservative Prime Ministers — notably Winston Churchill and Margaret Thatcher — led governments for 57 years of the twentieth
+                                    century. Positioned on the centre-right to right of British politics, the Conservative Party is ideologically conservative. Different factions have dominated the party at different times, including one nation conservatives,
+                                    Thatcherites, and liberal conservatives, while its views and policies have changed throughout its history. The party has generally adopted liberal economic policies—favouring free market economics, limiting state regulation,
+                                    and pursuing privatisation—although in the past has also supported protectionism. The party is British unionist, opposing both Irish reunification and Welsh and Scottish independence, and historically supported the
+                                    maintenance of the British Empire. The party includes those with differing views on the European Union, with Eurosceptic and pro-European wings. On social policy, it has historically taken a more socially conservative
+                                    approach, though this has receded over recent decades. In foreign policy, it favours a strong military capability, being supportive of British participation in NATO. The Conservatives are a member of the International
+                                    Democrat Union and the Alliance of Conservatives and Reformists in Europe, and sit with the European Conservatives and Reformists (ECR) parliamentary group. The Scottish, Welsh, Northern Irish and Gibraltarian branches
+                                    of the party are semi-autonomous. Its support base consists primarily of middle-class voters, especially in rural areas of England, and its domination of British politics throughout the twentieth century has led to
+                                    it being referred to as one of the most successful political parties in the Western world.[14][15][16]
+                                </p>
+                            </div>
+
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
                     </div>
+                </div>
+            </div>
 
-                    <div class="container">
+
+
+            <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+
+                <h4 class="modal-heading">SNP</h4>
+
+                <div class="thumbnail">
+                    <img id="SNP-pic" data-toggle="modal" data-target="#modal-SNP" src="{{url_for('static', filename='img/party-logo/snp.png')}}" alt="image of SNP">
+                </div>
+
+            </div>
+
+            <div id="modal-SNP" class="modal" role="dialog">
+                <div class="modal-dialog modal-lg">
+
+                    <!-- Modal content-->
+                    <div class="modal-content">
+
+                        <div class="modal-header">
+                            <h4 class="modal-title">SNP</h4>
+                        </div>
 
                         <div class="modal-body">
-                            <p>The Conservative Party, officially the Conservative and Unionist Party, is a centre-right political party in the United Kingdom. The governing party since 2010, it is the largest in the House of Commons, with 288 Members of
-                                Parliament. It also has 234 members of the House of Lords, 4 members of the European Parliament, 31 Members of the Scottish Parliament, 11 members of the Welsh Assembly, 8 members of the London Assembly and 7,445 local
-                                councillors.[13] The Conservative Party was founded in 1834 from the Tory Party—the Conservatives' colloquial name is "Tories"—and was one of two dominant political parties in the nineteenth century, along with the Liberal
-                                Party. Under Benjamin Disraeli it played a preeminent role in politics at the height of the British Empire. In 1912, the Liberal Unionist Party merged with the party to form the Conservative and Unionist Party. In the 1920s,
-                                the Labour Party surpassed the Liberals as the Conservatives' main rivals. Conservative Prime Ministers — notably Winston Churchill and Margaret Thatcher — led governments for 57 years of the twentieth century. Positioned
-                                on the centre-right to right of British politics, the Conservative Party is ideologically conservative. Different factions have dominated the party at different times, including one nation conservatives, Thatcherites, and
-                                liberal conservatives, while its views and policies have changed throughout its history. The party has generally adopted liberal economic policies—favouring free market economics, limiting state regulation, and pursuing
-                                privatisation—although in the past has also supported protectionism. The party is British unionist, opposing both Irish reunification and Welsh and Scottish independence, and historically supported the maintenance of the
-                                British Empire. The party includes those with differing views on the European Union, with Eurosceptic and pro-European wings. On social policy, it has historically taken a more socially conservative approach, though this
-                                has receded over recent decades. In foreign policy, it favours a strong military capability, being supportive of British participation in NATO. The Conservatives are a member of the International Democrat Union and the
-                                Alliance of Conservatives and Reformists in Europe, and sit with the European Conservatives and Reformists (ECR) parliamentary group. The Scottish, Welsh, Northern Irish and Gibraltarian branches of the party are semi-autonomous.
-                                Its support base consists primarily of middle-class voters, especially in rural areas of England, and its domination of British politics throughout the twentieth century has led to it being referred to as one of the most
-                                successful political parties in the Western world.[14][15][16]
+                            <p>The Scottish National Party (SNP; Scottish Gaelic: Pàrtaidh Nàiseanta na h-Alba, Scots: Scots National Pairtie) is a social-democratic[9][10][11] political party in Scotland. The SNP supports and campaigns for Scottish independence
+                                within the European Union.[7][21] It is the third-largest political party by membership in the United Kingdom, behind the Labour Party and the Conservative Party; it is the third-largest by overall representation in the
+                                House of Commons, behind the Conservative Party and the Labour Party; and it is the largest political party in Scotland, where it has the most seats in the Scottish Parliament and 35 out of the 59 Scottish seats in the
+                                House of Commons of the Parliament of the United Kingdom. The current Scottish National Party leader, Nicola Sturgeon, has served as First Minister of Scotland since November 2014. Founded in 1934 with the amalgamation
+                                of the National Party of Scotland and the Scottish Party, the party has had continuous parliamentary representation in Westminster since Winnie Ewing won the 1967 Hamilton by-election.[22] With the establishment of the
+                                devolved Scottish Parliament in 1999, the SNP became the second-largest party, serving two terms as the opposition. The SNP gained power at the 2007 Scottish Parliament election, forming a minority government, before going
+                                on to win the 2011 Parliament election, after which it formed Holyrood's first majority government.[23] It was reduced back to being a minority government at the 2016 election. The SNP is the largest political party in
+                                Scotland in terms of both seats in the Westminster and Holyrood parliaments, and membership, reaching 125,482 members as of August 2018, 35 MPs and over 400 local councillors.[24] The SNP also currently has 3 MEPs in the
+                                European Parliament, who sit in The Greens/European Free Alliance (Greens/EFA) group. The SNP is a member of the European Free Alliance (EFA). The party does not have any members of the House of Lords, as it has always
+                                maintained a position of objecting to an unelected upper house.[25][26]
                             </p>
                         </div>
 
                         <div class="modal-footer">
                             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                         </div>
+
                     </div>
                 </div>
             </div>
-        </div>
 
 
 
-        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+            <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
 
-            <h4 class="modal-heading">SNP</h4>
+                <h4 class="modal-heading">Labour</h4>
 
-            <div class="thumbnail">
-                <img id="SNP-pic" data-toggle="modal" data-target="#modal-SNP" src="{{url_for('static', filename='img/party-logo/snp.png')}}" alt="image of SNP">
+                <div class="thumbnail">
+                    <img id="labour-pic" data-toggle="modal" data-target="#modal-labour" src="{{url_for('static', filename='img/party-logo/labour.png')}}" alt="image of Labour">
+                </div>
+
             </div>
 
-        </div>
+            <div id="modal-labour" class="modal" role="dialog">
+                <div class="modal-dialog modal-lg">
 
-        <div id="modal-SNP" class="modal" role="dialog">
-            <div class="modal-dialog modal-lg">
+                    <!-- Modal content-->
+                    <div class="modal-content">
 
-                <!-- Modal content-->
-                <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title">Labour</h4>
+                        </div>
 
-                    <div class="modal-header">
-                        <h4 class="modal-title">SNP</h4>
+                        <div class="modal-body">
+                            <p>The Labour Party is a centre-left political party in the United Kingdom that has been described as an alliance of social democrats, democratic socialists and trade unionists.[9] The party's platform emphasises greater state
+                                intervention, social justice and strengthening workers' rights. The Labour Party was founded in 1900, having grown out of the trade union movement and socialist parties of the nineteenth century. It overtook the Liberal
+                                Party to become the main opposition to the Conservative Party in the early 1920s, forming two minority governments under Ramsay MacDonald in the 1920s and early 1930s. Labour served in the wartime coalition of 1940–1945,
+                                after which Clement Attlee's Labour government established the National Health Service and expanded the welfare state from 1945 to 1951. Under Harold Wilson and James Callaghan, Labour again governed from 1964 to 1970 and
+                                1974 to 1979. In the 1990s, Tony Blair took Labour closer to the centre as part of his "New Labour" project, which governed the UK under Blair and then Gordon Brown from 1997 to 2010. Since Jeremy Corbyn took over the leadership
+                                in 2015 from Ed Miliband, the party has moved leftward. Labour is currently the Official Opposition in the Parliament of the United Kingdom, having won the second-largest number of seats in the 2017 general election. The
+                                Labour Party is currently the largest party in the Welsh Assembly, forming the main party in the current Welsh government. The party is the third-largest in the Scottish Parliament. Labour is a member of the Party of European
+                                Socialists and Progressive Alliance, holds observer status in the Socialist International, and sits with the Progressive Alliance of Socialists and Democrats in the European Parliament. The party includes semi-autonomous
+                                Scottish, Welsh branches, and supports the Social Democratic and Labour Party in Northern Ireland, although it still organises there. As of 2017, Labour had the largest membership of any party in Western Europe.[10]</p>
+                        </div>
+
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+
                     </div>
-
-                    <div class="modal-body">
-                        <p>The Scottish National Party (SNP; Scottish Gaelic: Pàrtaidh Nàiseanta na h-Alba, Scots: Scots National Pairtie) is a social-democratic[9][10][11] political party in Scotland. The SNP supports and campaigns for Scottish independence
-                            within the European Union.[7][21] It is the third-largest political party by membership in the United Kingdom, behind the Labour Party and the Conservative Party; it is the third-largest by overall representation in the House
-                            of Commons, behind the Conservative Party and the Labour Party; and it is the largest political party in Scotland, where it has the most seats in the Scottish Parliament and 35 out of the 59 Scottish seats in the House of Commons
-                            of the Parliament of the United Kingdom. The current Scottish National Party leader, Nicola Sturgeon, has served as First Minister of Scotland since November 2014. Founded in 1934 with the amalgamation of the National Party
-                            of Scotland and the Scottish Party, the party has had continuous parliamentary representation in Westminster since Winnie Ewing won the 1967 Hamilton by-election.[22] With the establishment of the devolved Scottish Parliament
-                            in 1999, the SNP became the second-largest party, serving two terms as the opposition. The SNP gained power at the 2007 Scottish Parliament election, forming a minority government, before going on to win the 2011 Parliament
-                            election, after which it formed Holyrood's first majority government.[23] It was reduced back to being a minority government at the 2016 election. The SNP is the largest political party in Scotland in terms of both seats in
-                            the Westminster and Holyrood parliaments, and membership, reaching 125,482 members as of August 2018, 35 MPs and over 400 local councillors.[24] The SNP also currently has 3 MEPs in the European Parliament, who sit in The Greens/European
-                            Free Alliance (Greens/EFA) group. The SNP is a member of the European Free Alliance (EFA). The party does not have any members of the House of Lords, as it has always maintained a position of objecting to an unelected upper
-                            house.[25][26]
-                        </p>
-                    </div>
-
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                    </div>
-
                 </div>
             </div>
-        </div>
 
 
 
-        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
 
-            <h4 class="modal-heading">Labour</h4>
+            <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
 
-            <div class="thumbnail">
-                <img id="labour-pic" data-toggle="modal" data-target="#modal-labour" src="{{url_for('static', filename='img/party-logo/labour.png')}}" alt="image of Labour">
+                <h4 class="modal-heading">Brexit Party</h4>
+
+                <div class="thumbnail">
+                    <img id="brexit-pic" data-toggle="modal" data-target="#modal-brexit" src="{{url_for('static', filename='img/party-logo/brexit.png')}}" alt="image of Brexit Party Logo">
+                </div>
+
             </div>
 
-        </div>
+            <div id="modal-brexit" class="modal" role="dialog">
+                <div class="modal-dialog modal-lg">
 
-        <div id="modal-dead" class="modal" role="dialog">
-            <div class="modal-dialog modal-lg">
+                    <!-- Modal content-->
+                    <div class="modal-content">
 
-                <!-- Modal content-->
-                <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title">The Brexit Party</h4>
+                        </div>
 
-                    <div class="modal-header">
-                        <h4 class="modal-title">Labour</h4>
+                        <div class="modal-body">
+                            <p>The Brexit Party is a Eurosceptic political party in the United Kingdom. It became an active party in January 2019, and is currently led by Nigel Farage. It has 29 Members of the European Parliament (MEPs) and four Welsh Assembly
+                                Members. Their first major electoral success was winning the largest share of the national vote in the 2019 European Parliament election in the United Kingdom, four months after foundation. The party's priority is for Britain
+                                to withdraw from the European Union (EU) and to move to World Trade Organisation trading rules if a free trade agreement cannot be agreed, which it describes as "a clean-break Brexit".[7][8] Generally described as populist,
+                                it draws its support from those who are frustrated with the delayed implementation of the 2016 referendum decision and wish to leave the EU without remaining part of the EU's Single Market or Customs Union. Many of its
+                                supporters were formerly of the UK Independence Party (UKIP) – Farage having led UKIP from 2006 to 2009 and from 2010 to 2016 – as well as from the Conservative Party, including high-profile defectors such as Ann Widdecombe
+                                and Annunziata Rees-Mogg.[9] There have also been some endorsements from left-wing supporters of Brexit, such as former Labour Party and Respect Party MP George Galloway and several former members of the Revolutionary Communist
+                                Party.[10] The party styles itself as being focused on the restoration of Britain's democratic sovereignty. On contesting the 2019 European Parliament election it became the largest party by number of seats. Farage offered
+                                an electoral pact to the Conservative Party for the 2019 general election, and although this was turned down, the party has decided not to stand candidates in constituencies won by Conservative candidates in the previous
+                                election.
+                            </p>
+                        </div>
+
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+
                     </div>
-
-                    <div class="modal-body">
-                        <p>The Labour Party is a centre-left political party in the United Kingdom that has been described as an alliance of social democrats, democratic socialists and trade unionists.[9] The party's platform emphasises greater state intervention,
-                            social justice and strengthening workers' rights. The Labour Party was founded in 1900, having grown out of the trade union movement and socialist parties of the nineteenth century. It overtook the Liberal Party to become the
-                            main opposition to the Conservative Party in the early 1920s, forming two minority governments under Ramsay MacDonald in the 1920s and early 1930s. Labour served in the wartime coalition of 1940–1945, after which Clement Attlee's
-                            Labour government established the National Health Service and expanded the welfare state from 1945 to 1951. Under Harold Wilson and James Callaghan, Labour again governed from 1964 to 1970 and 1974 to 1979. In the 1990s, Tony
-                            Blair took Labour closer to the centre as part of his "New Labour" project, which governed the UK under Blair and then Gordon Brown from 1997 to 2010. Since Jeremy Corbyn took over the leadership in 2015 from Ed Miliband, the
-                            party has moved leftward. Labour is currently the Official Opposition in the Parliament of the United Kingdom, having won the second-largest number of seats in the 2017 general election. The Labour Party is currently the largest
-                            party in the Welsh Assembly, forming the main party in the current Welsh government. The party is the third-largest in the Scottish Parliament. Labour is a member of the Party of European Socialists and Progressive Alliance,
-                            holds observer status in the Socialist International, and sits with the Progressive Alliance of Socialists and Democrats in the European Parliament. The party includes semi-autonomous Scottish, Welsh branches, and supports
-                            the Social Democratic and Labour Party in Northern Ireland, although it still organises there. As of 2017, Labour had the largest membership of any party in Western Europe.[10]</p>
-                    </div>
-
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                    </div>
-
                 </div>
             </div>
-        </div>
-
-
-
-
-        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
-
-            <h4 class="modal-heading">Brexit Party</h4>
-
-            <div class="thumbnail">
-                <img id="brexit-pic" data-toggle="modal" data-target="#modal-brexit" src="{{url_for('static', filename='img/party-logo/brexit.png')}}" alt="image of Brexit Party Logo">
-            </div>
 
         </div>
-
-        <div id="modal-brexit" class="modal" role="dialog">
-            <div class="modal-dialog modal-lg">
-
-                <!-- Modal content-->
-                <div class="modal-content">
-
-                    <div class="modal-header">
-                        <h4 class="modal-title">The Brexit Party</h4>
-                    </div>
-
-                    <div class="modal-body">
-                        <p>The Brexit Party is a Eurosceptic political party in the United Kingdom. It became an active party in January 2019, and is currently led by Nigel Farage. It has 29 Members of the European Parliament (MEPs) and four Welsh Assembly
-                            Members. Their first major electoral success was winning the largest share of the national vote in the 2019 European Parliament election in the United Kingdom, four months after foundation. The party's priority is for Britain
-                            to withdraw from the European Union (EU) and to move to World Trade Organisation trading rules if a free trade agreement cannot be agreed, which it describes as "a clean-break Brexit".[7][8] Generally described as populist,
-                            it draws its support from those who are frustrated with the delayed implementation of the 2016 referendum decision and wish to leave the EU without remaining part of the EU's Single Market or Customs Union. Many of its supporters
-                            were formerly of the UK Independence Party (UKIP) – Farage having led UKIP from 2006 to 2009 and from 2010 to 2016 – as well as from the Conservative Party, including high-profile defectors such as Ann Widdecombe and Annunziata
-                            Rees-Mogg.[9] There have also been some endorsements from left-wing supporters of Brexit, such as former Labour Party and Respect Party MP George Galloway and several former members of the Revolutionary Communist Party.[10]
-                            The party styles itself as being focused on the restoration of Britain's democratic sovereignty. On contesting the 2019 European Parliament election it became the largest party by number of seats. Farage offered an electoral
-                            pact to the Conservative Party for the 2019 general election, and although this was turned down, the party has decided not to stand candidates in constituencies won by Conservative candidates in the previous election.</p>
-                    </div>
-
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-
     </div>
-</div>
 
 
 
-<div class="container">
-    <div class="row justify-content-center">
+    <div class="container">
+        <div class="row justify-content-center">
 
 
-        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+            <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
 
-            <h4 class="modal-heading">DUP</h4>
+                <h4 class="modal-heading">DUP</h4>
 
-            <div class="thumbnail">
-                <img id="dup-pic" data-toggle="modal" data-target="#modal-dup" src="{{url_for('static', filename='img/party-logo/dup.png')}}" alt="image of the dup party logo">
-            </div>
-
-        </div>
-
-        <div id="modal-dup" class="modal" role="dialog">
-            <div class="modal-dialog modal-lg">
-
-                <!-- Modal content-->
-                <div class="modal-content">
-
-                    <div class="modal-header">
-                        <h4 class="modal-title">The DUP</h4>
-                    </div>
-
-                    <div class="modal-body">
-                        <p>The Democratic Unionist Party (DUP) is a unionist political party in Northern Ireland favouring British identity. It was founded in 1971 during the Troubles by Ian Paisley, who led the party for the next 37 years. Now led by Arlene
-                            Foster, it is equal with Sinn Féin in having the most seats in the Northern Ireland Assembly, and it is the sixth-largest party in the House of Commons of the United Kingdom. Following the 2017 general election, the party agreed
-                            to support a Conservative minority government on a case-by-case basis on matters of mutual concern.[16] The DUP evolved from the Protestant Unionist Party and has historically strong links to the Free Presbyterian Church of
-                            Ulster, the church Paisley founded. During the Troubles, the DUP were opposed to power-sharing with Irish nationalists or republicans as a means of resolving the conflict, and likewise rejected attempts to involve the Republic
-                            of Ireland in Northern Irish affairs. It campaigned against the Sunningdale Agreement of 1973, the Anglo-Irish Agreement of 1985, and the Good Friday Agreement of 1998. In 2006, the DUP co-signed the St Andrews Agreement and
-                            agreed to share power with the republican party Sinn Fein who agreed to support the Police Service, courts, and rule of law. The party has been linked to various loyalist paramilitary groups, namely Ulster Resistance (URM)
-                            and Third Force.[17][18][19] The URM was formed on 10 November 1986 by DUP politicians Paisley, Peter Robinson and Ivan Foster, with the stated aim to "take direct action as and when required" to bring down the Agreement and
-                            defeat republicanism.[20] Recruitment rallies were held in towns across Northern Ireland and thousands were said to have joined.[20] The following year, the URM helped smuggle a large shipment of weapons into Northern Ireland,
-                            which were shared out between the URM, the Ulster Volunteer Force (UVF) and the Ulster Defence Association (UDA). In 1989, URM members attempted to trade Shorts' missile blueprints for weapons from the apartheid South African
-                            regime.[21] The party has been described as right-wing[5] and socially conservative, being anti-abortion and opposing same-sex marriage. The DUP sees itself as defending Britishness and Ulster Protestant culture against Irish
-                            nationalism. The party is Eurosceptic and during the UK European Union (EU) referendum it supported the UK's withdrawal from the EU.[22][23] For most of the DUP's history, the Ulster Unionist Party was the largest unionist
-                            party in Northern Ireland, but by 2004 the DUP had overtaken the UUP in terms of seats in the Northern Ireland Assembly and Parliament. Following the St Andrews Agreement in 2006, the DUP agreed to enter into power-sharing
-                            devolved government in Northern Ireland with Sinn Féin. Despite reports of divisions within the party, a majority of the party executive voted in favour of power-sharing in 2007.[24] However, the DUP's sole Member of the European
-                            Parliament (MEP), Jim Allister,[25] and seven DUP councillors[26] left the party in opposition to its plans to share power with Sinn Féin, founding the Traditional Unionist Voice.[27] Peter Robinson became DUP leader in 2008,
-                            and was succeeded in turn by Arlene Foster in 2015.</p>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                    </div>
+                <div class="thumbnail">
+                    <img id="dup-pic" data-toggle="modal" data-target="#modal-dup" src="{{url_for('static', filename='img/party-logo/dup.png')}}" alt="image of the dup party logo">
                 </div>
 
             </div>
-        </div>
 
+            <div id="modal-dup" class="modal" role="dialog">
+                <div class="modal-dialog modal-lg">
 
+                    <!-- Modal content-->
+                    <div class="modal-content">
 
+                        <div class="modal-header">
+                            <h4 class="modal-title">The DUP</h4>
+                        </div>
 
-        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
-
-            <h4 class="modal-heading">Lib Dems</h4>
-
-            <div class="thumbnail">
-                <img id="lib-pic" data-toggle="modal" data-target="#modal-lib" src="{{url_for('static', filename='img/party-logo/lib.png')}}" alt="image of the liberal democrats logo">
-            </div>
-
-        </div>
-
-        <div id="modal-lib" class="modal" role="dialog">
-            <div class="modal-dialog modal-lg">
-
-                <!-- Modal content-->
-                <div class="modal-content">
-
-                    <div class="modal-header">
-                        <h4 class="modal-title">The Lib Dems</h4>
-                    </div>
-
-                    <div class="modal-body">
-                        <p>The Liberal Democrats (LD), also known as the Lib Dems, is a liberal political party in the United Kingdom.Led by Jo Swinson, the party currently has 11 Members of Parliament in the House of Commons, 94 members of the House of
-                            Lords, 16 members of the European Parliament, five Members of the Scottish Parliament and one member in each of the Welsh Assembly and the London Assembly. It was in a coalition government with the Conservative Party from 2010
-                            to 2015. In 1981, an electoral alliance was established between the Liberal Party, a group which was the direct descendant of the 18th-century Whigs, and the Social Democratic Party (SDP), a splinter group from the Labour Party.
-                            In 1988, the parties merged as the Social and Liberal Democrats, adopting their present name over a year later. Under the leadership of Paddy Ashdown and then Charles Kennedy, the party grew during the 1990s and 2000s, focusing
-                            its campaigns on specific seats and becoming the third-largest party in the House of Commons. Under its leader Nick Clegg, the Liberal Democrats were junior partners in David Cameron's Conservative-led coalition government
-                            in which Clegg served as Deputy Prime Minister. Although it allowed them to implement some of their policies, the coalition damaged the Liberal Democrats' electoral prospects and it suffered heavy losses at the 2015 election.
-                            Since then, it has refocused itself as a party opposing Brexit. Positioned in the centre ground of British politics, the Liberal Democrats ideologically draw upon both liberalism and social democracy. Different factions have
-                            dominated the party at different points in its history, each with its own ideological bent, some leaning towards the centre-left and others the centre-right. The party calls for constitutional reform, including a transition
-                            from the first-past-the-post voting system to proportional representation. Emphasising stronger protections for some civil liberties, the party promotes socially liberal approaches to issues like LGBT rights, drug liberalisation,
-                            education policy, and criminal justice. It favours a market-based economy supplemented with social welfare spending. The party is internationalist and pro-European, supporting a People's Vote for the continued UK membership
-                            of the European Union and greater European integration; it previously called for adoption of the euro currency. The Lib Dems have promoted further environmental protections and opposed certain UK military engagements like the
-                            Iraq War. The Liberal Democrats are historically strongest in northern Scotland, southwest London, southwest England and mid-Wales. Membership is primarily middle-class and more heavily university educated than most UK parties.
-                            The party's partner in Northern Ireland is the Alliance Party of Northern Ireland. Internationally, the party is a member of the Liberal International and Alliance of Liberals and Democrats for Europe, with its MEPs affiliated
-                            to the Renew Europe group in the European Parliament.</p>
-                    </div>
-
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <div class="modal-body">
+                            <p>The Democratic Unionist Party (DUP) is a unionist political party in Northern Ireland favouring British identity. It was founded in 1971 during the Troubles by Ian Paisley, who led the party for the next 37 years. Now led by
+                                Arlene Foster, it is equal with Sinn Féin in having the most seats in the Northern Ireland Assembly, and it is the sixth-largest party in the House of Commons of the United Kingdom. Following the 2017 general election,
+                                the party agreed to support a Conservative minority government on a case-by-case basis on matters of mutual concern.[16] The DUP evolved from the Protestant Unionist Party and has historically strong links to the Free Presbyterian
+                                Church of Ulster, the church Paisley founded. During the Troubles, the DUP were opposed to power-sharing with Irish nationalists or republicans as a means of resolving the conflict, and likewise rejected attempts to involve
+                                the Republic of Ireland in Northern Irish affairs. It campaigned against the Sunningdale Agreement of 1973, the Anglo-Irish Agreement of 1985, and the Good Friday Agreement of 1998. In 2006, the DUP co-signed the St Andrews
+                                Agreement and agreed to share power with the republican party Sinn Fein who agreed to support the Police Service, courts, and rule of law. The party has been linked to various loyalist paramilitary groups, namely Ulster
+                                Resistance (URM) and Third Force.[17][18][19] The URM was formed on 10 November 1986 by DUP politicians Paisley, Peter Robinson and Ivan Foster, with the stated aim to "take direct action as and when required" to bring
+                                down the Agreement and defeat republicanism.[20] Recruitment rallies were held in towns across Northern Ireland and thousands were said to have joined.[20] The following year, the URM helped smuggle a large shipment of
+                                weapons into Northern Ireland, which were shared out between the URM, the Ulster Volunteer Force (UVF) and the Ulster Defence Association (UDA). In 1989, URM members attempted to trade Shorts' missile blueprints for weapons
+                                from the apartheid South African regime.[21] The party has been described as right-wing[5] and socially conservative, being anti-abortion and opposing same-sex marriage. The DUP sees itself as defending Britishness and
+                                Ulster Protestant culture against Irish nationalism. The party is Eurosceptic and during the UK European Union (EU) referendum it supported the UK's withdrawal from the EU.[22][23] For most of the DUP's history, the Ulster
+                                Unionist Party was the largest unionist party in Northern Ireland, but by 2004 the DUP had overtaken the UUP in terms of seats in the Northern Ireland Assembly and Parliament. Following the St Andrews Agreement in 2006,
+                                the DUP agreed to enter into power-sharing devolved government in Northern Ireland with Sinn Féin. Despite reports of divisions within the party, a majority of the party executive voted in favour of power-sharing in 2007.[24]
+                                However, the DUP's sole Member of the European Parliament (MEP), Jim Allister,[25] and seven DUP councillors[26] left the party in opposition to its plans to share power with Sinn Féin, founding the Traditional Unionist
+                                Voice.[27] Peter Robinson became DUP leader in 2008, and was succeeded in turn by Arlene Foster in 2015.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
                     </div>
 
                 </div>
             </div>
-        </div>
-        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
 
-            <h4 class="modal-heading">Plaid Cymru</h4>
 
-            <div class="thumbnail">
-                <img id="plaid-pic" data-toggle="modal" data-target="#modal-plaid" src="{{url_for('static', filename='img/party-logo/plaid.jpg')}}" alt="image of the plaid cymru logo">
+
+
+            <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+
+                <h4 class="modal-heading">Lib Dems</h4>
+
+                <div class="thumbnail">
+                    <img id="lib-pic" data-toggle="modal" data-target="#modal-lib" src="{{url_for('static', filename='img/party-logo/lib.png')}}" alt="image of the liberal democrats logo">
+                </div>
+
             </div>
 
-        </div>
+            <div id="modal-lib" class="modal" role="dialog">
+                <div class="modal-dialog modal-lg">
 
-        <div id="modal-plaid" class="modal" role="dialog">
-            <div class="modal-dialog modal-lg">
+                    <!-- Modal content-->
+                    <div class="modal-content">
 
-                <!-- Modal content-->
-                <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title">The Lib Dems</h4>
+                        </div>
 
-                    <div class="modal-header">
-                        <h4 class="modal-title">Plaid Cymru</h4>
+                        <div class="modal-body">
+                            <p>The Liberal Democrats (LD), also known as the Lib Dems, is a liberal political party in the United Kingdom.Led by Jo Swinson, the party currently has 11 Members of Parliament in the House of Commons, 94 members of the House
+                                of Lords, 16 members of the European Parliament, five Members of the Scottish Parliament and one member in each of the Welsh Assembly and the London Assembly. It was in a coalition government with the Conservative Party
+                                from 2010 to 2015. In 1981, an electoral alliance was established between the Liberal Party, a group which was the direct descendant of the 18th-century Whigs, and the Social Democratic Party (SDP), a splinter group from
+                                the Labour Party. In 1988, the parties merged as the Social and Liberal Democrats, adopting their present name over a year later. Under the leadership of Paddy Ashdown and then Charles Kennedy, the party grew during the
+                                1990s and 2000s, focusing its campaigns on specific seats and becoming the third-largest party in the House of Commons. Under its leader Nick Clegg, the Liberal Democrats were junior partners in David Cameron's Conservative-led
+                                coalition government in which Clegg served as Deputy Prime Minister. Although it allowed them to implement some of their policies, the coalition damaged the Liberal Democrats' electoral prospects and it suffered heavy losses
+                                at the 2015 election. Since then, it has refocused itself as a party opposing Brexit. Positioned in the centre ground of British politics, the Liberal Democrats ideologically draw upon both liberalism and social democracy.
+                                Different factions have dominated the party at different points in its history, each with its own ideological bent, some leaning towards the centre-left and others the centre-right. The party calls for constitutional reform,
+                                including a transition from the first-past-the-post voting system to proportional representation. Emphasising stronger protections for some civil liberties, the party promotes socially liberal approaches to issues like
+                                LGBT rights, drug liberalisation, education policy, and criminal justice. It favours a market-based economy supplemented with social welfare spending. The party is internationalist and pro-European, supporting a People's
+                                Vote for the continued UK membership of the European Union and greater European integration; it previously called for adoption of the euro currency. The Lib Dems have promoted further environmental protections and opposed
+                                certain UK military engagements like the Iraq War. The Liberal Democrats are historically strongest in northern Scotland, southwest London, southwest England and mid-Wales. Membership is primarily middle-class and more
+                                heavily university educated than most UK parties. The party's partner in Northern Ireland is the Alliance Party of Northern Ireland. Internationally, the party is a member of the Liberal International and Alliance of Liberals
+                                and Democrats for Europe, with its MEPs affiliated to the Renew Europe group in the European Parliament.</p>
+                        </div>
+
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+
                     </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
 
-                    <div class="modal-body">
-                        <p>Plaid Cymru (English: /ˌplaɪd ˈkʌmri/ PLYDE KUM-ree;[17] Welsh: [plaid ˈkəmri]; officially Plaid Cymru – The Party of Wales, often referred to simply as Plaid) is a social-democratic political party in Wales advocating Welsh independence
-                            from the United Kingdom within the European Union.[18][19] Plaid was formed in 1925 and won its first seat in the UK Parliament in 1966. By 2018, it held one of four Welsh seats in the European Parliament, four of 40 Welsh
-                            seats in the UK Parliament, 10 of 60 seats in the National Assembly for Wales, and 202 of 1,264 principal local authority councillors.[20] It is a member of the European Free Alliance.</p>
-                    </div>
+                <h4 class="modal-heading">Plaid Cymru</h4>
 
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <div class="thumbnail">
+                    <img id="plaid-pic" data-toggle="modal" data-target="#modal-plaid" src="{{url_for('static', filename='img/party-logo/plaid.jpg')}}" alt="image of the plaid cymru logo">
+                </div>
+
+            </div>
+
+            <div id="modal-plaid" class="modal" role="dialog">
+                <div class="modal-dialog modal-lg">
+
+                    <!-- Modal content-->
+                    <div class="modal-content">
+
+                        <div class="modal-header">
+                            <h4 class="modal-title">Plaid Cymru</h4>
+                        </div>
+
+                        <div class="modal-body">
+                            <p>Plaid Cymru (English: /ˌplaɪd ˈkʌmri/ PLYDE KUM-ree;[17] Welsh: [plaid ˈkəmri]; officially Plaid Cymru – The Party of Wales, often referred to simply as Plaid) is a social-democratic political party in Wales advocating Welsh
+                                independence from the United Kingdom within the European Union.[18][19] Plaid was formed in 1925 and won its first seat in the UK Parliament in 1966. By 2018, it held one of four Welsh seats in the European Parliament,
+                                four of 40 Welsh seats in the UK Parliament, 10 of 60 seats in the National Assembly for Wales, and 202 of 1,264 principal local authority councillors.[20] It is a member of the European Free Alliance.</p>
+                        </div>
+
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+
                     </div>
+                </div>
+            </div>
+
+            <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+
+                <h4 class="modal-heading">Green Party</h4>
+
+                <div class="thumbnail">
+                    <img id="green-pic" data-toggle="modal" data-target="#modal-green" src="{{url_for('static', filename='img/party-logo/green.jpg')}}" alt="image of the green party logo">
+                </div>
+
+            </div>
+
+            <div id="modal-hobbit" class="modal" role="dialog">
+                <div class="modal-dialog modal-lg">
+
+                    <!-- Modal content-->
+                    <div class="modal-content">
+
+                        <div class="modal-header">
+                            <h4 class="modal-title">The Green Party</h4>
+                        </div>
+
+                        <div class="modal-body">
+                            <p>The Green Party of England and Wales (GPEW; Welsh: Plaid Werdd Cymru a Lloegr) is a green, left-wing political party in England and Wales.[7][8] Headquartered in London, since September 2018, its co-leaders are Siân Berry and
+                                Jonathan Bartley. The Green Party has one representative in the House of Commons, two in the House of Lords, and seven in the European Parliament. Also, it has various councillors in UK local government and two members
+                                of the London Assembly.[11][12][13][14] The party's ideology combines environmentalism with left-wing and centre-left economic policies, including well-funded, locally controlled public services within the confines of a
+                                steady state economy with regulated capitalism, and supports proportional representation.[15] It also takes a progressive approach to social policies such as civil liberties, animal rights, LGBT rights, and drug policy
+                                reform. The party also believes strongly in non-violence, basic income, a living wage,[16] and democratic participation.[17] The party comprises various regional divisions, including the semi-autonomous Wales Green Party.
+                                Internationally, the party is affiliated to the Global Greens and the European Green Party. The Green Party of England and Wales was established in 1990 alongside the Scottish Green Party and the Green Party in Northern
+                                Ireland through the division of the pre-existing Green Party, a group which had originally been established as the PEOPLE Party in 1973. Experiencing centralising reforms spearheaded by the Green 2000 group in early 1990,
+                                the party sought to emphasise growth in local governance, doing so throughout 1990. In 2010, the party gained its first MP in former leader Caroline Lucas, who represents the constituency of Brighton Pavilion.[18]
+                            </p>
+                        </div>
+
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="container justify-content-centre">
+                <div class="row">
+
+                    <button type="button" class=" btn btn-info btn-block-home"><a href="{{url_for('user_blogs')}}">To The Blogs</a></button>
+                </div>
+                <div class="row bottom-button">
+
+                    <button type="button" class="btn btn-info btn-block-home"><a href="{{url_for('add_blog')}}">Register A Blog</a></button>
 
                 </div>
             </div>
-        </div>
 
-        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
-
-            <h4 class="modal-heading">Green Party</h4>
-
-            <div class="thumbnail">
-                <img id="green-pic" data-toggle="modal" data-target="#modal-green" src="{{url_for('static', filename='img/party-logo/green.jpg')}}" alt="image of the green party logo">
-            </div>
-
-        </div>
-
-        <div id="modal-hobbit" class="modal" role="dialog">
-            <div class="modal-dialog modal-lg">
-
-                <!-- Modal content-->
-                <div class="modal-content">
-
-                    <div class="modal-header">
-                        <h4 class="modal-title">The Green Party</h4>
-                    </div>
-
-                    <div class="modal-body">
-                        <p>The Green Party of England and Wales (GPEW; Welsh: Plaid Werdd Cymru a Lloegr) is a green, left-wing political party in England and Wales.[7][8] Headquartered in London, since September 2018, its co-leaders are Siân Berry and Jonathan
-                            Bartley. The Green Party has one representative in the House of Commons, two in the House of Lords, and seven in the European Parliament. Also, it has various councillors in UK local government and two members of the London
-                            Assembly.[11][12][13][14] The party's ideology combines environmentalism with left-wing and centre-left economic policies, including well-funded, locally controlled public services within the confines of a steady state economy
-                            with regulated capitalism, and supports proportional representation.[15] It also takes a progressive approach to social policies such as civil liberties, animal rights, LGBT rights, and drug policy reform. The party also believes
-                            strongly in non-violence, basic income, a living wage,[16] and democratic participation.[17] The party comprises various regional divisions, including the semi-autonomous Wales Green Party. Internationally, the party is affiliated
-                            to the Global Greens and the European Green Party. The Green Party of England and Wales was established in 1990 alongside the Scottish Green Party and the Green Party in Northern Ireland through the division of the pre-existing
-                            Green Party, a group which had originally been established as the PEOPLE Party in 1973. Experiencing centralising reforms spearheaded by the Green 2000 group in early 1990, the party sought to emphasise growth in local governance,
-                            doing so throughout 1990. In 2010, the party gained its first MP in former leader Caroline Lucas, who represents the constituency of Brighton Pavilion.[18]</p>
-                    </div>
-
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-        <div class="container justify-content-centre">
-            <div class="row">
-
-                <button  type="button" class="btn btn-info btn-block">To The Blogs</button>
-            </div>
-            <div class="row">
-
-                <button type="button" class="btn btn-info btn-block">Register A Blog</button>
-
-            </div>
         </div>
 
     </div>
 
-</div>
-
-
-
+</section>
 
 
 {% endblock %}

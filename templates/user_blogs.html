@@ -1,35 +1,51 @@
 {% extends 'base.html' %} {% block content %}
-<h1 class="row justify-content-center">The Blog Page</h1>
 
-{% for blog in blogs %}
-<div class="row justify-content-center">
-  <div class="row">
-    <div class="bg-blog">
-      <div class="card">
+<h1 class="row justify-content-center blog-title">The Blog Page</h1>
+<div class="container blog-bg">
+  {% for blog in blogs %}
+  <div class="container blog-output justify-content-centre">
+    <div class="row output-info-name">
+      <strong>{{blog.user_name}}</strong>
+    </div>
+    <hr class="data-line">
+    <div class="row output-info">
+      <p>This is my religious belief {{blog.user_religion}}</p>
+    </div>
+    <hr class="data-line">
+    <div class="row output-info">
+      <p>I am {{blog.user_age}} years old</p>
+    </div>
+    <hr class="data-line">
+    <div class="row output-info">
+      <p>I live in {{blog.user_region}} region</p>
+    </div>
+    <hr class="data-line">
+    <div class="row output-info">
+      <p>This is my approximate wage £{{blog.user_wage}}</p>
+    </div>
+    <hr class="data-line">
+    <div class="row output-info">
+      <p>This is the party I will be supporting {{blog.user_party}}</p>
+    </div>
+    <hr class="data-line">
+    <div class="row output-info">
+      <p>This is why I will be supporting {{blog.user_party}};</p>
+      <br>
+      <p class="user-comment-text">{{blog.user_comment}}</p>
+    </div>
 
-        <div class="card-body">
-          <h5 class="card-title">{{blog.user_name}}</h5>
-          <h6 class="card-subtitle mb-2 text-muted">I will be voting {{blog.user_party}}</h6>
-          <h4 class="card-title">This is why I am voting for</h4>
-          <p class="card-text">{{blog.user_comment}}</p>
-          <div class="row">
-            <span class="user-borders justify-content-center col-4"> My age is {{blog.user_age}}</span>
-            <span class="user-borders justify-content-center col-4">My religion is {{blog.user_religion}}</span>
-            <span class="user-borders justify-content-center col-4"> I earn £{{blog.user_wage}}</span>
-            <span class="user-borders justify-content-center col-4"> I live in {{blog.user_region}}</span>
-          </div>
-          <div class="row">
-            <a href="{{url_for('edit_blog', user_profile_id=blog._id)}}" <button type="button" class="btn btn-warning">Edit</button>
+
+    <div class="row">
+      <a href="{{url_for('edit_blog', user_profile_id=blog._id)}}" <button type="button" class="btn btn-warning btn-block">Edit</button>
           </a>
-          </div>
-          <div class="row">
-            <a href="{{url_for('delete_blog', user_profile_id=blog._id)}}" <button type="button" class="btn btn-danger">Delete</button>
+    </div>
+    <div class="row">
+      <a href="{{url_for('delete_blog', user_profile_id=blog._id)}}" <button type="button" class="btn btn-danger btn-block">Delete</button>
           </a>
-          </div>
-        </div>
-      </div>
     </div>
   </div>
 </div>
 
-<br> {% endfor %} {% endblock %}
+
+
+<hr/ class="hr-style"> {% endfor %} {% endblock %}
