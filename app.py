@@ -66,6 +66,8 @@ def insert_blog():
     
     now = datetime.datetime.now()
     
+    user_exists = mongo.db.user_profile.find_one({'user_email': request.form['user_email']})
+    
     blog= {
         "user_name":request.form.get("user_name"),
         "user_email":request.form.get("user_email"),
@@ -77,15 +79,24 @@ def insert_blog():
         "user_wage":request.form.get("user_wage"),
         "user_time":now
         }
+        
+    
     
     if request.method=="POST":
-        blog = request.form.to_dict()
-        user_profile = mongo.db.user_profile
+        if user_exists is None:
+            
+            #credit to https://www.youtube.com/watch?v=vVx1737auSE
+            
+            blog = request.form.to_dict()
+            user_profile = mongo.db.user_profile
         
-        user_profile.insert_one(blog)
+            user_profile.insert_one(blog)
+            return redirect(url_for("user_blogs"))
         
+        else:
+            flash("this Email is taken!")
+            return redirect(url_for("add_blog"))
     
-        return redirect(url_for("user_blogs"))
     
 @app.route('/edit_blog/<user_profile_id>')
 def edit_blog(user_profile_id):
@@ -133,6 +144,11 @@ def delete_blog(user_profile_id):
     
     mongo.db.user_profile.remove({'_id': ObjectId(user_profile_id)})
     return redirect(url_for('user_blogs'))
+    
+    
+    
+
+    
     
     
 if __name__ == '__main__':

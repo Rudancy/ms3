@@ -265,9 +265,20 @@ h1 {
     margin-bottom: 25px;
 }
 
+.thumbnail-bg {
+    background: antiquewhite;
+    border-style: solid;
+    margin-left: 0px;
+    border-radius: 21px;
+}
 
 
-.modal-heading {}
+
+
+
+.modal-heading {
+    text-align: center;
+}
 
 .modal-content p {}
 
