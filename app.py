@@ -85,16 +85,19 @@ def insert_blog():
     if request.method=="POST":
         if user_exists is None:
             
+            
+            
             #credit to https://www.youtube.com/watch?v=vVx1737auSE
             
             blog = request.form.to_dict()
             user_profile = mongo.db.user_profile
         
             user_profile.insert_one(blog)
+            flash("Blog has been logged!", "success")
             return redirect(url_for("user_blogs"))
         
         else:
-            flash("this Email is taken!")
+            flash("this Email is taken!", "warning")
             return redirect(url_for("add_blog"))
     
     
