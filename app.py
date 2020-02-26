@@ -97,7 +97,7 @@ def insert_blog():
             return redirect(url_for("user_blogs"))
         
         else:
-            flash("this Email is taken!", "warning")
+            flash("this Email is taken!", "danger")
             return redirect(url_for("add_blog"))
     
     

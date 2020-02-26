@@ -4,10 +4,16 @@
 
 
 
+<div class="container">
+  <div class="row">
+    <h1 class="col-12 headings">The Blog Page</h1>
+  </div>
+</div>
 
-<h1 class="row justify-content-center blog-title">The Blog Page</h1>
+
+
+{% for blog in blogs %}
 <div class="container blog-bg">
-  {% for blog in blogs %}
   <div class="container blog-output justify-content-centre">
     <div class="row output-info-name">
       <strong>{{blog.user_name}}</strong>

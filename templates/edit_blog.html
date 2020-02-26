@@ -1,8 +1,9 @@
 {% extends 'base.html' %} {% block content %}
-<h1>
-    Edit blog
-</h1>
-
+<div class="headings">
+    <h1>
+        Edit blog
+    </h1>
+</div>
 <div class="bd-datainput">
     <div class="container justify-content-center">
         <form action="{{url_for('update_blog', user_profile_id=user_profile_id)}}" method="POST">

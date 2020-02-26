@@ -236,10 +236,17 @@ btn-block-home {
 
 /*----------------- main headings--------------*/
 
-#main-header {
-    text-align: center;
-    margin-top: 40px;
+.headings {
+    background-color: #ece3e0;
+    border-style: solid;
+    padding-left: 20px;
+    border-radius: 25px;
     margin-bottom: 40px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5px;
+    padding-bottom: 7px;
 }
 
 
@@ -251,11 +258,12 @@ btn-block-home {
 h3,
 h1 {
     text-align: center;
+
 }
 
 
 .main-heading {
-    margin-bottom: 25px;
+
     text-align: center;
     margin-bottom: 30px;
 }
@@ -288,7 +296,25 @@ body {
     background-color: transparent;
 }
 
-
-/*.bg-light {
-    background-color: #aebecd!important;
+@media (min-width: 768px) {
+    #conservative-pic,
+    #SNP-pic,
+    #labour-pic,
+    #brexit-pic,
+    #dup-pic,
+    #green-pic,
+    #lib-pic,
+    #plaid-pic {
+        display: inline-block;
+        width: 150px;
+        height: 150px;
+        padding: 4px;
+        line-height: 1.42857143;
+        background-color: transparent;
+        border: 5px solid #797575;
+        border-radius: 70px;
+        -webkit-transition: all .2s ease-in-out;
+        -o-transition: all .2s ease-in-out;
+        transition: all .2s ease-in-out;
+    }
 }
