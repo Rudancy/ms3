@@ -80,7 +80,7 @@ def insert_blog():
         "user_time":now
         }
         
-    
+
     
     if request.method=="POST":
         if user_exists is None:
@@ -146,7 +146,13 @@ def delete_blog(user_profile_id):
     #delete function
     
     mongo.db.user_profile.remove({'_id': ObjectId(user_profile_id)})
-    return redirect(url_for('user_blogs'))
+    all_blogs=mongo.db.user_profile.find_one()
+    
+    if all_blogs == None:
+        return redirect(url_for("home"))
+        
+    else:
+        return redirect(url_for('user_blogs'))
     
     
     
