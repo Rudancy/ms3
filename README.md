@@ -84,7 +84,7 @@ return redirect(url_for('user_blogs'))
 
 Would include an authentication system, this is of highest priority as this would allow for much better interaction. Also this would also mean that users could only update and edit their own posts, allowing for greater security. I would most likely use WTForms for this.
 
-Another major future feature would be the use of Mongodb Atlas graphs to represent the data shown in an aesthetically pleasing way.
+Another major future feature would be the use of Mongodb Atlas graphs to represent the data shown in an aesthetically pleasing way, this would allow for users to quick see the correlations between different demographics, for exampl 5 people voted labour and they all live in the north-east or Lib-Dems voters earn x amount of money on average.
 
 A feature that would open up the database information would be to have a template page dedicated to the collection of the information whereby using database methods such as
 
