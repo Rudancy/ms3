@@ -6,13 +6,15 @@ This project is about creating a CRUD application that is useable in the real wo
 
 The website is aimed at people various  people, of whom may have multiple interests. First there are those who wish to have a say about why they are voting for this or that party. There maybe those who wish to learn more about the parties, that is why the first page has information on each of the main parties. 
 
-![](C:\Users\Tom\Pictures\Screenshots\Screenshot (51).png)
+![](https://github.com/Rudancy/ms3/blob/master/wireframe/Screenshot%20(51).png)
 
 The database was built in such away that it could be expanded upon for example wages have been set that £0-10000, 10001-20000 ect, but this could be expanded on simply by adding extra options to the database, therefor increasing the accuracy of the information this can be done to all demographic information including what parties people may wish to vote for. 
 
 
 
-![](C:\Users\Tom\Pictures\Screenshots\Screenshot (50).png)
+![](https://github.com/Rudancy/ms3/blob/master/wireframe/Screenshot%20(50).png?raw=true)
+
+
 
 
 
@@ -82,7 +84,7 @@ return redirect(url_for('user_blogs'))
 
 Would include an authentication system, this is of highest priority as this would allow for much better interaction. Also this would also mean that users could only update and edit their own posts, allowing for greater security. I would most likely use WTForms for this.
 
-Another major future feature would be the use of Mongodb Atlas graphs to represent the data shown in an aesthetically pleasing way.
+Another major future feature would be the use of Mongodb Atlas graphs to represent the data shown in an aesthetically pleasing way, this would allow for users to quick see the correlations between different demographics, for exampl 5 people voted labour and they all live in the north-east or Lib-Dems voters earn x amount of money on average.
 
 A feature that would open up the database information would be to have a template page dedicated to the collection of the information whereby using database methods such as
 
