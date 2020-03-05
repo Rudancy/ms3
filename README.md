@@ -12,7 +12,7 @@ The database was built in such away that it could be expanded upon for example w
 
 
 
-https://github.com/Rudancy/ms3/blob/master/wireframe/Screenshot%20(50).png?raw=true
+![](https://github.com/Rudancy/ms3/blob/master/wireframe/Screenshot%20(50).png?raw=true)
 
 
 
