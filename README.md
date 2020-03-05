@@ -12,7 +12,8 @@ The database was built in such away that it could be expanded upon for example w
 
 
 
-![](C:\Users\Tom\Pictures\Screenshots\Screenshot (50).png)
+https://github.com/Rudancy/ms3/blob/master/wireframe/Screenshot%20(50).png
+
 
 
 
