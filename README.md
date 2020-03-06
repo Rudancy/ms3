@@ -78,6 +78,10 @@ A feature that has very much helped in the creation of this website is the redir
 return redirect(url_for('user_blogs'))
 ```
 
+Using jinja2 the ability to use templates meant that all the basic but important things like the nav-bar and the scripts for JS could be written on one page (the base page)
+and then that information could be passed across to the other HTML pages, this is Template Inheritence and useful for making changes quickly. Using the server side of flask variables can then easily be passed
+to the templates, . This allows for logic to be directly applied on the HTML ( through conditional statements for example) making the web pages no longer
+static but dynamic
  
 
 ### Future Features
