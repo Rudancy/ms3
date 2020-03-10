@@ -295,7 +295,8 @@ btn-block-home {
 .thumbnail-bg {
     background: antiquewhite;
     border-style: solid;
-    margin-left: 0px;
+    margin-left: 1rem;
+    margin-right: 1rem;
     border-radius: 21px;
 }
 
