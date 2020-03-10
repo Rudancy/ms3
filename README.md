@@ -90,7 +90,10 @@ Would include an authentication system, this is of highest priority as this woul
 
 Another major future feature would be the use of Mongodb Atlas graphs to represent the data shown in an aesthetically pleasing way, this would allow for users to quick see the correlations between different demographics, for exampl 5 people voted labour and they all live in the north-east or Lib-Dems voters earn x amount of money on average.
 
-A feature that would open up the database information would be to have a template page dedicated to the collection of the information whereby using database methods such as
+A potential feature would be a ranking system for the best blog, this would have to made so that each member could only vote
+up or down the same blog once, also allowing other users to comment on peoples blogs would allow for greater conversation and interaction with the site.
+
+A interactive section, linked to real time political events associated with the election would also add greater depth to the site.
 
 ## Technologies
 

@@ -68,13 +68,14 @@ p {
 
 
 .output-info {
-    margin-left: 30px;
-
+    margin-left: 2rem;
+    margin-right: 2rem;
 }
 
 .output-info-name {
     padding-top: 12px;
-    margin-left: 30px;
+    margin-left: 1rem;
+    margin-right: 1rem;
 }
 
 
@@ -334,7 +335,7 @@ body {
     #home-bg {
         width: 90%;
         margin: 0 auto 0 auto;
-        
+
     }
 
     #conservative-pic,
