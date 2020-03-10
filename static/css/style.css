@@ -97,6 +97,12 @@ p {
 
 /*-------------------------------------------thumbnail styling--------------------*/
 
+#home-bg {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+
 .thumbnail {
     display: block;
     padding: 4px;
@@ -252,7 +258,7 @@ btn-block-home {
     padding-bottom: 7px;
 }
 
-.headings-modals{
+.headings-modals {
     background-color: antiquewhite;
     border-style: solid;
     padding-left: 20px;
@@ -313,7 +319,7 @@ btn-block-home {
 
 
 .modal-content {
-    
+
     color: black;
     background-color: #e8dcdc;
 }
@@ -324,6 +330,13 @@ body {
 }
 
 @media (min-width: 768px) {
+
+    #home-bg {
+        width: 90%;
+        margin: 0 auto 0 auto;
+        
+    }
+
     #conservative-pic,
     #SNP-pic,
     #labour-pic,
@@ -344,4 +357,6 @@ body {
         -o-transition: all .2s ease-in-out;
         transition: all .2s ease-in-out;
     }
+
+
 }
